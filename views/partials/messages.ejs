@@ -1,0 +1,40 @@
+<% if (typeof errors !== "undefined") { %> <% errors.forEach(function(error) {
+%>
+<div class="alert warning">
+  <input type="checkbox" id="alert4" />
+  <label class="close" title="close" for="alert4"> </label>
+  <p class="inner"><%= error.msg %></p>
+</div>
+
+<% }); %> <% } %> 
+
+
+<% if (typeof success_msg !== "undefined" || success_msg !== "") { %> 
+<% success_msg.forEach(function(msg) { %>
+<div class="alert success">
+  <input type="checkbox" id="alert5" />
+  <label class="close" title="close" for="alert5"> </label>
+  <p class="inner"><%= success_msg %></p>
+</div>
+
+<% }); %> <% } %>
+
+<% if (typeof error_msg !== "undefined" || error_msg !== "") { %> 
+    <% error_msg.forEach(function(msg) { %>
+    <div class="alert success">
+      <input type="checkbox" id="alert5" />
+      <label class="close" title="close" for="alert5"> </label>
+      <p class="inner"><%= error_msg %></p>
+    </div>
+    
+<% }); %> <% } %>
+
+<% if (typeof error !== "undefined" || error !== "") { %> 
+  <% error.forEach(function(msg) { %>
+  <div class="alert success">
+    <input type="checkbox" id="alert5" />
+    <label class="close" title="close" for="alert5"> </label>
+    <p class="inner"><%= error %></p>
+  </div>
+  
+<% }); %> <% } %>
